@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Reset</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="common.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <div id="authBox" class="authContainer">
+      <h2>Password Reset</h2>
+      <form id="passwordResetForm" onsubmit="return handlePasswordReset(event)">
+        <input type="email" id="resetEmail" placeholder="Enter your email" required />
+        <button type="button" onclick="sendResetCode()">Send Code</button>
+        <div id="verificationSection">
+          <input type="text" id="verificationCode" placeholder="Enter verification code" required />
+          <input type="password" id="newPassword" placeholder="Enter new password" required />
+          <button type="submit">Reset Password</button>
+          <p id="resetError"></p>
+        </div>
+      </form>
+      <p>Remembered? <a href="login.html">Back to login</a></p>
+    </div>
+  </main>
+</body>
+</html>
